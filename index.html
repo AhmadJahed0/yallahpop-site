@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yallah Pop — Halal Matchmaking Show for Muslim Singles</title>
+<meta name="description" content="Yallah Pop is a halal matchmaking show helping Muslim singles across America find their person. Ages 18–40. Apply to be on the show.">
+<meta property="og:title" content="Yallah Pop — Muslim Singles. Real Marriages.">
+<meta property="og:description" content="A halal matchmaking show for Muslim singles across America. Apply to be on the show.">
+<meta property="og:image" content="https://yallahpop.com/og.png">
+<meta property="og:url" content="https://yallahpop.com">
+<meta name="theme-color" content="#2B0A3D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Cairo:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #2B0A3D;
+    --bg2: #4A1066;
+    --pink: #FF3D7F;
+    --pink-dark: #C21857;
+    --gold: #FFC94A;
+    --cream: #FFF4E6;
+    --ink: #2B0A3D;
+    --muted: rgba(255, 244, 230, .72);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--cream);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* nav */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(43, 10, 61, .85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.06); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 24px; }
+  .brand span { color: var(--gold); }
+  .brand img { width: 22px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; font-weight: 600; }
+  .nav-links a { text-decoration: none; opacity: .85; }
+  .nav-links a:hover { opacity: 1; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--pink); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 24px; border-radius: 999px; transition: transform .15s, box-shadow .15s; box-shadow: 0 8px 24px rgba(255, 61, 127, .35); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 61, 127, .5); }
+  .btn.ghost { background: transparent; border: 2px solid rgba(255,244,230,.35); box-shadow: none; }
+  .btn.ghost:hover { border-color: var(--cream); }
+  nav .btn { padding: 9px 20px; }
+
+  /* hero */
+  .hero { position: relative; background: radial-gradient(circle at 70% 30%, var(--bg2), var(--bg) 65%); padding: 72px 0 96px; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+  .eyebrow { display: inline-block; background: rgba(255, 201, 74, .14); color: var(--gold); font-weight: 700; padding: 6px 14px; border-radius: 999px; font-size: 14px; letter-spacing: .04em; margin-bottom: 18px; }
+  h1 { font-size: clamp(44px, 7vw, 80px); line-height: .98; font-weight: 800; letter-spacing: -.01em; }
+  h1 em { font-style: normal; color: var(--pink); }
+  .hero p { font-size: 20px; color: var(--muted); margin: 22px 0 32px; max-width: 520px; }
+  .hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .ar { font-family: 'Cairo', sans-serif; color: var(--pink); font-size: 28px; margin-top: 28px; }
+  .logo-card { position: relative; display: flex; flex-direction: column; align-items: center; line-height: .85; }
+  .logo-card .y { font-size: clamp(56px, 8vw, 104px); font-weight: 600; color: var(--gold); }
+  .logo-card .p { display: flex; align-items: center; font-size: clamp(110px, 16vw, 210px); font-weight: 800; }
+  .logo-card .p img { width: .72em; margin: 0 .03em; animation: float 4s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-14px) rotate(3deg); } }
+  .confetti { position: absolute; border-radius: 50%; opacity: .5; animation: float 6s ease-in-out infinite; }
+
+  /* sections */
+  section { padding: 96px 0; }
+  .light { background: var(--cream); color: var(--ink); }
+  .light .muted { color: rgba(43, 10, 61, .7); }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-head .eyebrow { margin-bottom: 12px; }
+  .light .eyebrow { background: rgba(255, 61, 127, .12); color: var(--pink-dark); }
+  h2 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; font-weight: 800; }
+  .section-head p { font-size: 19px; margin-top: 14px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .step { background: #fff; border-radius: 24px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(43, 10, 61, .08); }
+  .step .num { width: 48px; height: 48px; border-radius: 14px; background: var(--pink); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 22px; margin-bottom: 18px; }
+  .step h3 { font-size: 24px; line-height: 1.15; margin-bottom: 8px; }
+  .step p { color: rgba(43, 10, 61, .72); font-size: 17px; }
+
+  .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .value { border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 28px 24px; background: rgba(255,255,255,.03); }
+  .value .icon { font-size: 30px; margin-bottom: 12px; }
+  .value h3 { font-size: 21px; line-height: 1.2; margin-bottom: 6px; }
+  .value p { color: var(--muted); font-size: 16px; }
+
+  .apply { background: linear-gradient(135deg, var(--pink), var(--pink-dark)); border-radius: 32px; padding: 64px 48px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; color: #fff; }
+  .apply h2 { color: #fff; }
+  .apply p { font-size: 19px; opacity: .9; margin-top: 12px; }
+  .apply ul { list-style: none; padding: 0; display: grid; gap: 12px; font-size: 18px; font-weight: 600; }
+  .apply li::before { content: "✓"; display: inline-grid; place-items: center; width: 26px; height: 26px; margin-right: 10px; border-radius: 50%; background: rgba(255,255,255,.2); font-size: 14px; }
+  .apply .btn { background: var(--cream); color: var(--ink); box-shadow: 0 10px 30px rgba(43, 10, 61, .3); margin-top: 28px; }
+
+  .faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+  details { background: #fff; border-radius: 18px; padding: 20px 24px; box-shadow: 0 6px 20px rgba(43, 10, 61, .06); }
+  summary { cursor: pointer; font-weight: 700; font-size: 19px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--pink); font-size: 26px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: 10px; color: rgba(43, 10, 61, .72); font-size: 17px; }
+
+  .socials { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+  .social { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding: 12px 22px; border-radius: 999px; border: 2px solid rgba(255,244,230,.2); font-weight: 700; transition: border-color .15s, background .15s; }
+  .social:hover { border-color: var(--pink); background: rgba(255, 61, 127, .1); }
+  .social svg { width: 20px; height: 20px; fill: currentColor; }
+
+  footer { border-top: 1px solid rgba(255,255,255,.08); padding: 32px 0; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--cream); }
+
+  @media (max-width: 900px) {
+    .hero .wrap, .apply { grid-template-columns: 1fr; }
+    .hero { padding: 48px 0 72px; text-align: center; }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .hero .ctas { justify-content: center; }
+    .logo-card { order: -1; }
+    .steps { grid-template-columns: 1fr; }
+    .values { grid-template-columns: 1fr 1fr; }
+    .apply { padding: 44px 28px; }
+  }
+  @media (max-width: 640px) {
+    .nav-links a:not(.btn) { display: none; }
+    section { padding: 72px 0; }
+    .values { grid-template-columns: 1fr; }
+    .wrap { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#"><img src="favicon.svg" alt=""><span>Yallah</span>&nbsp;Pop</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="https://forms.gle/tvABF5cx3Upt6ZhV8" target="_blank" rel="noopener">Apply</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="confetti" style="width:14px;height:14px;background:var(--gold);top:18%;left:6%"></span>
+  <span class="confetti" style="width:10px;height:10px;background:var(--pink);top:70%;left:44%;animation-delay:1s"></span>
+  <span class="confetti" style="width:18px;height:18px;background:var(--pink);top:12%;right:8%;animation-delay:2s"></span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">NOW CASTING · AGES 18–40</span>
+      <h1>Muslim singles.<br><em>Real marriages.</em></h1>
+      <p>Yallah Pop is a halal matchmaking show helping Muslim singles across America find their person. Every balloon pop is a "not for me" — whoever's left gets a real conversation, and maybe a nikah.</p>
+      <div class="ctas">
+        <a class="btn" href="https://forms.gle/tvABF5cx3Upt6ZhV8" target="_blank" rel="noopener">Apply to be on the show 🎈</a>
+        <a class="btn ghost" href="https://www.youtube.com/@yallahpop" target="_blank" rel="noopener">Watch on YouTube</a>
+      </div>
+      <div class="ar">يلا بوب</div>
+    </div>
+    <div class="logo-card" aria-label="Yallah Pop">
+      <div class="y">Yallah</div>
+      <div class="p">P<img src="favicon.svg" alt="">P</div>
+    </div>
+  </div>
+</header>
+
+<section id="how" class="light">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Pop the balloon if they're not the one</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Singles line up</h3>
+        <p>A group of Muslim singles stand in line, each holding a balloon.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>One person walks in</h3>
+        <p>They share who they are, what they're looking for, and their dealbreakers.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Pop or stay 🎈</h3>
+        <p>Not feeling it? Pop. Whoever's left standing gets a real conversation — and a shot at something serious.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">THE YALLAH POP WAY</span>
+      <h2>Fun to watch. Halal at heart.</h2>
+      <p class="muted" style="color:var(--muted)">Not a messy dating show. We're here for one thing: helping people find a spouse.</p>
+    </div>
+    <div class="values">
+      <div class="value"><div class="icon">🤲</div><h3>Halal format</h3><p>Modest dress, no physical contact, respectful from start to finish.</p></div>
+      <div class="value"><div class="icon">👨‍👩‍👧</div><h3>Family welcome</h3><p>Walis and family members are invited to come along.</p></div>
+      <div class="value"><div class="icon">💍</div><h3>Marriage-minded</h3><p>Every contestant is single, 18–40, and serious about marriage.</p></div>
+      <div class="value"><div class="icon">🇺🇸</div><h3>Nationwide</h3><p>Muslim singles from every background, across the country.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="apply">
+  <div class="wrap">
+    <div class="apply">
+      <div>
+        <h2>Ready to find your person?</h2>
+        <p>Applying takes about 5 minutes. Our casting team reviews every application and reaches out to selected singles.</p>
+        <a class="btn" href="https://forms.gle/tvABF5cx3Upt6ZhV8" target="_blank" rel="noopener">Apply now →</a>
+      </div>
+      <ul>
+        <li>Muslim, ages 18–40</li>
+        <li>Never married, divorced, or widowed</li>
+        <li>Serious about marriage</li>
+        <li>Comfortable being on camera</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions? We've got you.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Who can apply?</summary>
+        <p>Muslim singles ages 18–40 who are currently single and serious about marriage. We verify age with a photo ID before filming.</p>
+      </details>
+      <details>
+        <summary>Where is it filmed?</summary>
+        <p>Episodes are filmed in Dallas, Texas. Singles from anywhere in the U.S. are welcome to apply — the application asks whether you can travel.</p>
+      </details>
+      <details>
+        <summary>Can my family or wali come?</summary>
+        <p>Yes. Walis and family members are welcome on filming day.</p>
+      </details>
+      <details>
+        <summary>Is it halal?</summary>
+        <p>We keep it respectful: modest dress, no physical contact, and no games. The show is built around finding a spouse, not drama.</p>
+      </details>
+      <details>
+        <summary>Will I be on YouTube and TikTok?</summary>
+        <p>Yes. Episodes are posted on YouTube, and clips on TikTok and Instagram. Everyone on camera signs a release before filming.</p>
+      </details>
+      <details>
+        <summary>Does applying guarantee I'll be on the show?</summary>
+        <p>No. Our casting team reviews every application and contacts the singles who are selected.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center">
+  <div class="wrap">
+    <h2>Follow the show</h2>
+    <p style="color:var(--muted);font-size:19px;margin-top:10px">New episodes and clips every week.</p>
+    <div class="socials">
+      <a class="social" href="https://www.youtube.com/@yallahpop" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>YouTube</a>
+      <a class="social" href="https://www.instagram.com/yallahpop" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>Instagram</a>
+      <a class="social" href="https://www.tiktok.com/@yallahpop" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.7V9.5a6.3 6.3 0 1 0 5.4 6.2V8.8a8.2 8.2 0 0 0 4.8 1.5V6.9l-1-.2z"/></svg>TikTok</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Yallah Pop · يلا بوب</div>
+    <div><a href="mailto:hello@yallahpop.com">hello@yallahpop.com</a> · <a href="mailto:casting@yallahpop.com">casting@yallahpop.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
